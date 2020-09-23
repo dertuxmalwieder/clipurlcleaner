@@ -18,8 +18,8 @@ func main() {
 		for x := range time.Tick(time.Second) {
 			clipped, err := clipboard.ReadAll()
 			if err == nil && clipped != previousUrl {
-				_, invalidUrl := url.Parse(clipped)
-				if invalidUrl == nil {
+				u, invalidUrl := url.Parse(clipped)
+				if invalidUrl == nil && u.Host != "" {
 					// valid URL
 					fmt.Printf("[%s] Processing URL: %s\n", x, clipped)
 					previousUrl = processUrlItem(clipped)
