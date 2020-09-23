@@ -1,6 +1,6 @@
-module code.rosaelefanten.org/urlcopy
+module code.rosaelefanten.org/clipurlcleaner
 
-go 1.14
+go 1.15
 
 require (
 	github.com/atotto/clipboard v0.1.2

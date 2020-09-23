@@ -13,4 +13,4 @@ Watches your clipboard for shortened URLs and unshortens them for a less stupid 
 
 # Run
 
-`./urlcopy >/dev/null &`
+`./clipurlcleaner >/dev/null &`
