@@ -9,7 +9,7 @@ Watches your clipboard for shortened URLs and unshortens them for a less stupid 
 
 ## On Windows
 
-`go build -ldflags -H windowsgui`
+`go build -ldflags="-H windowsgui"`
 
 # Run
 
