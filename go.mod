@@ -4,6 +4,5 @@ go 1.15
 
 require (
 	github.com/atotto/clipboard v0.1.2
-	github.com/getlantern/systray v1.0.4
-	github.com/zyedidia/clipboard v1.0.3
+	github.com/getlantern/systray v1.0.5-0.20200914092014-7a15ebe76a11
 )
