@@ -128,7 +128,7 @@ func processUrlItem(urlToCheck string) string {
 	if potentialUrlShortener || contains(shortenerList, u.Hostname()) {
 		expandedUrl, err := ExpandUrl(urlToCheck)
 		if err != nil {
-			// Ursprüngliche Domain nicht erreichbar:
+			// Cannot reach the URL:
 			return urlToCheck
 		}
 
@@ -138,7 +138,7 @@ func processUrlItem(urlToCheck string) string {
 		// Parse again, just in case:
 		u, err = url.Parse(urlToCheck)
 		if err != nil {
-			// Fehler in der neuen Domain:
+			// Error in the updated domain:
 			return urlToCheck
 		}
 	}
