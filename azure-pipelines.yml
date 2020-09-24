@@ -34,10 +34,12 @@ steps:
 - task: PublishBuildArtifacts@1
   inputs:
      artifactName: drop
-- task: GitHubRelease@0
+- task: GitHubRelease@1
   inputs:
-    gitHubConnection: dertuxmalwieder
-    repositoryName: '$(Build.Repository.Name)' 
+    gitHubConnection: 'azure-github'
+    repositoryName: 'dertuxmalwieder/clipurlcleaner'
     action: 'create'
     target: '$(Build.SourceVersion)'
-    tagSource: 'auto'
+    tagSource: 'gitTag'
+    changeLogCompareToRelease: 'lastFullRelease'
+    changeLogType: 'commitBased'
