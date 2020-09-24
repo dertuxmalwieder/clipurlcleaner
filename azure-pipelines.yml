@@ -39,7 +39,8 @@ steps:
     gitHubConnection: 'azure-github'
     repositoryName: 'dertuxmalwieder/clipurlcleaner'
     action: 'create'
-    target: '$(Build.SourceVersion)'
-    tagSource: 'gitTag'
+    tagSource: userSpecifiedTag  
+    tag: '$(Build.BuildNumber)'  
+    title: '$(Build.BuildNumber)'  
     changeLogCompareToRelease: 'lastFullRelease'
     changeLogType: 'commitBased'
