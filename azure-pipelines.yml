@@ -34,3 +34,10 @@ steps:
 - task: PublishBuildArtifacts@1
   inputs:
      artifactName: drop
+- task: GitHubRelease@0
+  inputs:
+    gitHubConnection: dertuxmalwieder
+    repositoryName: '$(Build.Repository.Name)' 
+    action: 'create'
+    target: '$(Build.SourceVersion)'
+    tagSource: 'auto'
