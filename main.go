@@ -35,7 +35,7 @@ func main() {
 func onReady() {
 	if runtime.GOOS == "windows" {
 		// Windows won't let us have emojis. :-(
-		systray.SetTemplateIcon(TrayIcon, TrayIcon)
+		systray.SetIcon(TrayIcon)
 	} else {
 		systray.SetTitle("🧹")
 	}
