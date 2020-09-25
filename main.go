@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"net/url"
+	"runtime"
 	"time"
 
 	"github.com/getlantern/systray"
@@ -32,7 +33,12 @@ func main() {
 }
 
 func onReady() {
-	systray.SetTitle("🧹")
+	if runtime.GOOS == "windows" {
+		// Windows won't let us have emojis. :-(
+		systray.SetTemplateIcon(TrayIcon, TrayIcon)
+	} else {
+		systray.SetTitle("🧹")
+	}
 	systray.SetTooltip("I'm cleaning URLs in the clipboard")
 	mQuitOrig := systray.AddMenuItem("Quit", "Quit cleaning URLs")
 
