@@ -10,7 +10,7 @@ import (
 
 // Remove tracking/SEO parameters from the URL:
 var urlParamBlacklist = []string{
-	"wtmc", "WT.mc_id", "wt_zmc",
+	"wt_mc", "wtmc", "WT.mc_id", "wt_zmc",
 
 	"ocid", "xid",
 
