@@ -36,7 +36,7 @@ var urlParamBlacklist = []string{
 	"__twitter_impression", "share", "ncid", "rnd", "feed_id",
 	"_unique_id", "GEPC", "pt", "xtor", "wtrid", "medium", "sara_ecid",
 	"from", "inApp", "ssm", "campaign", "mbid", "s_campaign", "rss_id",
-	"cmpid", "s_cid", "mv2", "scid", "sdid", "s_iid", "ssm",
+	"cmpid", "s_cid", "mv2", "scid", "sc2id", "sdid", "s_iid", "ssm",
 	"spi_ref", "referrerlane",
 
 	"share_bandit_exp", "share_bandit_var",
