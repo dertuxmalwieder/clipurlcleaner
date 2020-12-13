@@ -26,6 +26,8 @@ var urlParamBlacklist = []string{
 	"ga_source", "ga_medium", "ga_term", "ga_content",
 	"ga_campaign", "ga_place",
 
+	"pk_campaign", "pk_keyword", "pk_medium", "pk_source",
+
 	"fb_action_ids", "fb_action_types", "fb_source", "fb_ref",
 	"fbclid", "fbc",
 
