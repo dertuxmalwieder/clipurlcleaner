@@ -2,16 +2,18 @@ package main
 
 import (
 	"fmt"
+	"net/http"
 	"net/url"
 	"runtime"
 	"time"
 
-	"github.com/getlantern/systray"
 	"github.com/atotto/clipboard"
+	"github.com/getlantern/systray"
+	"github.com/mattn/go-ieproxy"
 )
 
 var (
-	previousUrl string   // Avoid parsing it over and over again
+	previousUrl string // Avoid parsing it over and over again
 )
 
 func main() {
@@ -25,7 +27,7 @@ func main() {
 					fmt.Printf("[%s] Processing URL: %s\n", x, clipped)
 					previousUrl = processUrlItem(clipped)
 					clipboard.WriteAll(previousUrl)
-				}	
+				}
 			}
 		}
 	}()
@@ -46,6 +48,10 @@ func onReady() {
 		<-mQuitOrig.ClickedCh
 		systray.Quit()
 	}()
+}
+
+func init() {
+	http.DefaultTransport.(*http.Transport).Proxy = ieproxy.GetProxyFunc()
 }
 
 func onExit() {
