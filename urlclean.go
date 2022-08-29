@@ -10,6 +10,7 @@ import (
 
 // Remove tracking/SEO parameters from the URL:
 var urlParamBlacklist = []string{
+	// wt_:
 	"wt_mc", "wtmc", "WT.mc_id", "wt_zmc",
 
 	"ocid", "xid",
@@ -17,20 +18,25 @@ var urlParamBlacklist = []string{
 	"at_medium", "at_campaign", "at_custom1", "at_custom2",
 	"at_custom3", "at_custom4",
 
+	// utm_:
 	"utm_source", "utm_medium", "utm_campaign", "utm_term",
 	"utm_content", "utm_name", "utm_referrer", "utm_brand",
 	"utm_social-type", "utm_kxconfid",
 
 	"guce_referrer", "guce_referrer_sig", "guccounter",
 
+	// google:
 	"ga_source", "ga_medium", "ga_term", "ga_content",
 	"ga_campaign", "ga_place",
 
+	// pk_:
 	"pk_campaign", "pk_keyword", "pk_medium", "pk_source",
 
+	// facebook:
 	"fb_action_ids", "fb_action_types", "fb_source", "fb_ref",
 	"fbclid", "fbc",
 
+	// hmb_:
 	"hmb_campaign", "hmb_medium", "hmb_source",
 
 	"newsticker", "CMP", "feature", "camp", "cid", "source",
@@ -41,6 +47,10 @@ var urlParamBlacklist = []string{
 	"cmpid", "s_cid", "mv2", "scid", "sc2id", "sdid", "s_iid", "ssm",
 	"spi_ref", "referrerlane",
 
+	// ebay:
+	"amdata", "_trkparms",
+
+	// sharebandit:
 	"share_bandit_exp", "share_bandit_var",
 
 	"igshid", "idpartenaire",
