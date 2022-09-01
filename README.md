@@ -12,6 +12,8 @@ Watches your clipboard for shortened URLs and unshortens them for a less stupid 
 
 `go build -ldflags="-H windowsgui"`
 
+(Or use the [prebuilt binaries](https://cdn.tuxproject.de/projects/clipurlcleaner/).)
+
 # Run
 
 `./clipurlcleaner >/dev/null &`
