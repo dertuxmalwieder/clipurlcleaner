@@ -23,7 +23,8 @@ var urlParamBlacklist = []string{
 	"utm_content", "utm_name", "utm_referrer", "utm_brand",
 	"utm_social-type", "utm_kxconfid",
 
-	"guce_referrer", "guce_referrer_sig", "guccounter",
+	// yahoo:
+	"guce", "guce_referrer", "guce_referrer_sig", "guccounter",
 
 	// google:
 	"ga_source", "ga_medium", "ga_term", "ga_content",
